@@ -8,7 +8,7 @@ const Banner = () => {
             <div className='w-8/12 pr-16 space-y-5 pt-14'>
                 <p className='text-gray-400 font-semibold text-base tracking-widest uppercase'>Welcome to my world</p>
                 <h2 className='font-extrabold text-6xl text-gray-300 leading-normal'>Hi, I’m <span className='text-[#FF014F]'>Robiul Islam </span>
-                    a Developer.</h2>
+                    a Web Developer.</h2>
                 <p className='text-lg text-gray-400 font-medium leading-relaxed'>I love building interactive, responsive, and user-friendly web applications. I'm always learning and exploring new technologies to enhance my development skills.</p>
                 <div className="flex justify-between items-center">
                 <FindWithMe/>

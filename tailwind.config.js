@@ -15,6 +15,7 @@ export default {
       colors: {
         primaryColor: "#212428",
         primaryRed: "#FF013F",
+        pinkRed: '#D50647'
       }
     },
   },
