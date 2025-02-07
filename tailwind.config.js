@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primaryFont: ["Montserrat", "serif"],
+        primaryFont: ["Montserrat", "sans-serif"],
         secondaryFont: ["Poppins", "serif"],
         logoFont: ["Barriecito", "serif"],
         russoOne: ["Russo One, sans-serif"],

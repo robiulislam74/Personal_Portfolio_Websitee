@@ -32,7 +32,7 @@ const Navbar = () => {
     </div>
 
     return (
-        <div className="navbar py-8 max-w-screen-xl mx-auto">
+        <div className="navbar py-10 max-w-screen-xl mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -71,7 +71,9 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <button className="bg-primaryColor uppercase btn border-none hover:bg-gray-900 hover:shadow-none hover:translate-y-2 duration-300 py-4 px-6 text-primaryRed rounded-lg shadow-lg shadow-gray-950 flex justify-center items-center">CV Download</button>
+                <NavLink to={"https://drive.google.com/file/d/1UtRBErGwje52vHGCs-pWCRY6_DB1h5dB/view?usp=sharing"} target='_blank' className="bg-primaryColor uppercase btn border-none hover:bg-gray-900 hover:shadow-none hover:translate-y-2 duration-300 py-4 px-6 text-primaryRed rounded-lg shadow-lg shadow-gray-950 flex justify-center items-center">
+                <button >CV Download</button>
+                </NavLink>
             </div>
         </div>
     )

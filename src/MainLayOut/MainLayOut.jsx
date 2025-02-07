@@ -11,11 +11,11 @@ const MainLayOut = () => {
        <Navbar/>
        </div>
        {/* Layout outlet */}
-       <div className='min-h-[calc(100vh-344px)]'>
+       <div className='min-h-[calc(100vh-360px)] max-w-screen-xl mx-auto'>
         <Outlet/>
        </div>
        {/* Footer Section */}
-       <div>
+       <div className='mt-24'>
         <Footer/>
        </div>
     </>
