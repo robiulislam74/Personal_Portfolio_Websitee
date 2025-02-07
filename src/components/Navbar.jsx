@@ -10,24 +10,24 @@ import { NavLink } from 'react-router-dom'
 // Contact
 
 const Navbar = () => {
-    const navItems = <div className='text-gray-400 uppercase font-normal flex gap-8'>
+    const navItems = <div className='text-gray-400 uppercase  font-normal flex gap-8'>
         <NavLink>
-            <li>Home</li>
+            <li className="hover:text-gray-200 hover:font-semibold duration-100">Home</li>
         </NavLink>
         <NavLink>
-            <li>Features</li>
+            <li className="hover:text-gray-200 hover:font-semibold duration-100">Features</li>
+        </NavLink>
+        <NavLink to={'/about'}>
+            <li className="hover:text-gray-200 hover:font-semibold duration-100">About Me</li>
         </NavLink>
         <NavLink>
-            <li>Portfolio</li>
+            <li className="hover:text-gray-200 hover:font-semibold duration-100">Clients</li>
         </NavLink>
         <NavLink>
-            <li>Clients</li>
+            <li className="hover:text-gray-200 hover:font-semibold duration-100">Pricing</li>
         </NavLink>
         <NavLink>
-            <li>Pricing</li>
-        </NavLink>
-        <NavLink>
-            <li>Contact</li>
+            <li className="hover:text-gray-200 hover:font-semibold duration-100">Contact</li>
         </NavLink>
     </div>
 
