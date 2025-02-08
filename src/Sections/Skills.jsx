@@ -10,12 +10,12 @@ import figma from '../assets/images/figma.png'
 
 const Skills = () => {
     return (
-        <div>
+        <div className='max-w-screen-lg mx-auto'>
             <Header
                 title={'Visit my skill & Hire me'}
                 subTitle={'My Skill'}
             />
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 <div className='text-[#00D8FF] group hover:bg-[#1A1D21] ease-in duration-200 py-10 px-16 rounded-xl shadow-[0_3px_10px_rgb(200,200,200,0.1)]'>
                     <div className='flex items-center gap-2 transition-transform ease-in duration-200 group-hover:scale-110'>
                         <FaReact className='text-5xl' />
