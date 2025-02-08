@@ -16,7 +16,7 @@ const Banner = () => {
                 </div>
             </div>
             <div className='flex-1 flex justify-end float-end'>
-                <div className="h-[390px] w-[375px] shadow-[0_3px_10px_rgb(200,200,200,0.1)]">
+                <div className="h-[390px] w-[375px] rounded-lg shadow-[0_3px_10px_rgb(200,200,200,0.1)]">
                     <img className="h-full w-full" src="https://i.ibb.co.com/q3h19Kkg/Fronend-Developer1-removebg-preview.png" alt="" />
                 </div>
             </div>

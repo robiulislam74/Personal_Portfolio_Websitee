@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const AboutMe = () => {
   return (
@@ -7,7 +8,8 @@ const AboutMe = () => {
         
         {/* Text Section */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <h2 className="text-3xl sm:text-4xl font-bold text-pinkRed mb-4">
+        <p className='text-pinkRed text-sm font-medium uppercase'>Visit my portfolio & Hire me</p>
+          <h2 className="text-3xl sm:text-6xl font-extrabold text-gray-300 my-4">
             About Me
           </h2>
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
@@ -20,18 +22,18 @@ const AboutMe = () => {
 
           {/* Hobbies & Interests */}
           <p className="mt-4 text-gray-300">
-            When I’m not coding, you can find me **playing guitar 🎸, painting 🎨, or exploring new places 🌍**.  
-            I believe that creativity fuels my programming skills, and I always seek **innovation & inspiration** in everything I do.
+          When I’m not coding, you can find me playing Cricket 🏏, attending the Mosque for Salah 🕌, or exploring new places 🌍.
+          I believe that creativity fuels my programming skills, and I always seek innovation & inspiration in everything I do.
           </p>
 
           {/* Call to Action Buttons */}
           <div className="mt-6 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-            <a href="https://t.me/robiul_islam74" target='_blank' className="px-6 py-3 bg-pinkRed text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition duration-300">
-              Contact Me
-            </a>
-            <a href="/Robiul_Islam.pdf" download className="px-6 py-3 border border-primaryRed text-primaryRed font-semibold rounded-lg hover:bg-red-500 hover:text-white transition duration-300">
+            {/* <a href="/Robiul_Islam.pdf" download className="px-6 py-3 border border-primaryRed text-primaryRed font-semibold rounded-lg hover:bg-red-500 hover:text-white transition duration-300">
               Download Resume
-            </a>
+            </a> */}
+            <NavLink to={"https://drive.google.com/file/d/1UtRBErGwje52vHGCs-pWCRY6_DB1h5dB/view?usp=sharing"} target='_blank' className="bg-primaryColor uppercase btn border-none hover:bg-gray-900 hover:shadow-none hover:translate-y-2 duration-300 py-4 px-6 text-primaryRed rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.1)] shadow-gray-950">
+                <button >Resume Download</button>
+                </NavLink>
           </div>
         </div>
 
