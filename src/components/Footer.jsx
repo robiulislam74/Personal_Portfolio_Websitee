@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <div className="max-w-screen-xl mx-auto">
+        <div className="max-w-screen-xl mx-auto pt-32">
         <div className="divider bg-black h-0.5"></div>
         <footer className="footer footer-center bg-primaryColor text-base-content rounded p-10">
             {/* <nav className="grid grid-flow-col gap-4">
@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
             </nav> */}
             <aside>
-                <p className='text-lg text-gray-400'>Copyright © 2025. All rights reserved by Parv infotech.</p>
+                <p className='text-lg text-gray-400'>Copyright © 2025. All rights reserved by Robiul Islam.</p>
             </aside>
         </footer>
         </div>
