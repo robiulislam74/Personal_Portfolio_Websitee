@@ -82,7 +82,7 @@ const Contact = () => {
         </div>
 
         <div>
-          <button className="bg-primaryColor uppercase btn border-none hover:bg-gray-900 hover:shadow-none hover:translate-y-1 duration-300 py-4 w-full text-primaryRed rounded-lg shadow-[0_10px_20px_rgba(0020,_0020,_0020,_0.5)]">
+          <button className="bg-primaryColor uppercase btn border-none hover:bg-gray-900 hover:shadow-none hover:translate-y-1 duration-300 py-4 w-full text-primaryRed rounded-lg shadow-[0_10px_20px_rgba(0020,_0020,_0020,_0.6)]">
             Send Message →
           </button>
         </div>

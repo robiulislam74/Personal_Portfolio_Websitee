@@ -1,16 +1,14 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
 
 const AboutMe = () => {
   return (
-    <section className=" text-white py-12 px-6 lg:px-20">
+    <section name='about' className=" text-white py-12 px-6 lg:px-20">
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div className="flex justify-center p-8 rounded-lg shadow-[0_10px_20px_rgba(0020,_0020,_0020,_0.7)]">
           <img
             src="https://i.ibb.co.com/yngyxMzL/IMG-0667-removebg-preview.jpg"
             alt="Profile"
-            className="w-60 h-60 sm:w-72 sm:h-72 lg:w-96 lg:h-96 object-cover rounded-md shadow-[0_3px_10px_rgb(200,200,200,0.1)]"
+            className="w-60 h-60 sm:w-72 sm:h-72 lg:w-96 lg:h-[425px] object-cover rounded-lg"
           />
         </div>
         {/* Text Section */}
@@ -38,9 +36,9 @@ const AboutMe = () => {
             {/* <a href="/Robiul_Islam.pdf" download className="px-6 py-3 border border-primaryRed text-primaryRed font-semibold rounded-lg hover:bg-red-500 hover:text-white transition duration-300">
               Download Resume
             </a> */}
-            <NavLink to={"https://drive.google.com/file/d/1UtRBErGwje52vHGCs-pWCRY6_DB1h5dB/view?usp=sharing"} target='_blank' className="bg-primaryColor uppercase btn border-none hover:bg-gray-900 hover:shadow-none hover:translate-y-1 duration-300 py-4 px-6 text-primaryRed rounded-lg shadow-[0_10px_20px_rgba(0020,_0020,_0020,_0.7)]">
-                <button >Resume Download</button>
-                </NavLink>
+            <a href='/Robiul_Islam.pdf' download className="bg-primaryColor uppercase btn border-none hover:bg-gray-900 hover:shadow-none hover:translate-y-1 duration-300 py-4 px-6 text-primaryRed rounded-lg shadow-[0_10px_20px_rgba(0020,_0020,_0020,_0.7)]">
+                <button className='uppercase'>Resume Download</button>
+                </a>
           </div>
         </div>
       </div>

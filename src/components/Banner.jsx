@@ -16,7 +16,7 @@ const Banner = () => {
                 </div>
             </div>
             <div className='flex-1 flex justify-end float-end'>
-                <div className="h-[390px] w-[375px] relative  flex justify-center items-center rounded-lg shadow-[0_3px_10px_rgb(200,200,200,0.1)]">
+                <div className="h-[390px] w-[375px] relative  flex justify-center items-center rounded-lg shadow-[0_5px_25px_rgba(0050,_0050,_0050,_0.6)]">
                     <img className="absolute bottom-0" src="https://i.ibb.co.com/B5RrN74F/Fronend-Developer1-removebg-preview-1.png" alt="" />
                 </div>
             </div>
