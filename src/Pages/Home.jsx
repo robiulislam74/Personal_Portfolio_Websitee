@@ -5,6 +5,7 @@ import Skills from '../Sections/Skills'
 import Contact from '../Sections/Contact'
 import { Element } from 'react-scroll'
 import ProjectsSection from '../Sections/ProjectsSection'
+import Education from '../Sections/Education'
 
 const Home = () => {
 
@@ -28,6 +29,10 @@ const Home = () => {
         {/* Project section */}
         <div>
           <ProjectsSection/>
+        </div>
+        {/* Educational Qualification */}
+        <div className='mt-32'>
+            <Education/>
         </div>
         {/* Contact Section */}
         <Element name='contact'>
