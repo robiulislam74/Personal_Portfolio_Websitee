@@ -14,12 +14,12 @@ import ProjectDetail from "../Pages/ProjectDetail";
             path: "/",
             element: <Home/>
         },
-        {
-          path: "/projects/:id",
-          element: <ProjectDetail/>
-        }
       ]
     },
+    {
+      path: "/projects/:id",
+      element: <ProjectDetail/>
+    }
   ]);
 
   export default router

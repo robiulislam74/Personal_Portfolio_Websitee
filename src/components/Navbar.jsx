@@ -16,8 +16,8 @@ const Navbar = () => {
         <Link>
             <li className="hover:text-gray-200 hover:font-semibold duration-100">Clients</li>
         </Link>
-        <Link>
-            <li className="hover:text-gray-200 hover:font-semibold duration-100">Pricing</li>
+        <Link to='project' smooth={true} duration={500}>
+            <li className="hover:text-gray-200 hover:font-semibold duration-100">Projects</li>
         </Link>
         <Link to='contact' smooth={true} duration={500}>
             <li className="hover:text-gray-200 hover:font-semibold duration-100">Contact</li>

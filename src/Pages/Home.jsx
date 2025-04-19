@@ -1,4 +1,3 @@
-import React from 'react'
 import Banner from '../components/Banner'
 // import Features from '../Sections/Features'
 import AboutMe from '../Sections/AboutMe'
@@ -8,6 +7,7 @@ import { Element } from 'react-scroll'
 import ProjectsSection from '../Sections/ProjectsSection'
 
 const Home = () => {
+
   return (
     <div>
       <Element name='home'>
