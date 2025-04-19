@@ -31,9 +31,11 @@ const Home = () => {
           <ProjectsSection/>
         </div>
         {/* Educational Qualification */}
+        <Element name='education'>
         <div className='mt-32'>
             <Education/>
         </div>
+        </Element>
         {/* Contact Section */}
         <Element name='contact'>
         <div className='mt-32'>

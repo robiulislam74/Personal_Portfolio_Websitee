@@ -1,82 +1,89 @@
-
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
+  const navItems = (
+    <>
+      <li>
+        <Link to="home" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="features" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
+          Features
+        </Link>
+      </li>
+      <li>
+        <Link to="about" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
+          About Me
+        </Link>
+      </li>
+      <li>
+        <Link to="project" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
+          Projects
+        </Link>
+      </li>
+      <li>
+        <Link to="education" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
+          Educations
+        </Link>
+      </li>
+      <li>
+        <Link to="contact" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
+          Contact
+        </Link>
+      </li>
+    </>
+  );
 
-    const navItems = <div className='text-gray-400 uppercase  font-normal flex gap-8'>
-        <Link to="home" smooth={true} duration={500}>
-            <li className="hover:text-gray-200 hover:font-semibold duration-100">Home</li>
-        </Link>
-        <Link>
-            <li className="hover:text-gray-200 hover:font-semibold duration-100">Features</li>
-        </Link>
-        <Link to="about" smooth={true} duration={500}>
-            <li className="hover:text-gray-200 hover:font-semibold duration-100">About Me</li>
-        </Link>
-        <Link>
-            <li className="hover:text-gray-200 hover:font-semibold duration-100">Clients</li>
-        </Link>
-        <Link to='project' smooth={true} duration={500}>
-            <li className="hover:text-gray-200 hover:font-semibold duration-100">Projects</li>
-        </Link>
-        <Link to='contact' smooth={true} duration={500}>
-            <li className="hover:text-gray-200 hover:font-semibold duration-100">Contact</li>
-        </Link>
-    </div>
-
-    return (
-        <>
-
-            <div className="navbar py-8 max-w-screen-xl mx-auto">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            {navItems}
-                        </ul>
-                    </div>
-                    <div className='flex items-center gap-3'>
-                        <div className="avatar">
-                            <div className="w-12 rounded-full border-2 border-gray-500">
-                                <img src="https://i.ibb.co.com/N2Rqfg8b/Fronend-Developer1.jpg" />
-                            </div>
-                        </div>
-                        <span className='text-gray-400 font-russoOne text-xl font-bold'>ROBIUL</span>
-                    </div>
-                </div>
-
-                <div className="navbar-end">
-                    <div className="navbar-center mr-8 hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
-                            {navItems}
-                        </ul>
-                    </div>
-                    <a href='/Robiul_Islam.pdf' download className="bg-primaryColor btn border-none hover:bg-gray-900 hover:shadow-none hover:translate-y-1 duration-300 py-4 px-6 text-primaryRed rounded-lg shadow-[0_10px_20px_rgba(0020,_0020,_0020,_0.7)]">
-                        <button className='uppercase' >CV Download</button>
-                    </a>
-                    {/* <NavLink to={"https://drive.google.com/file/d/1UtRBErGwje52vHGCs-pWCRY6_DB1h5dB/view?usp=sharing"} target='_blank' className="bg-primaryColor uppercase btn border-none hover:bg-gray-900 hover:shadow-none hover:translate-y-2 duration-300 py-4 px-6 text-primaryRed rounded-lg shadow-lg shadow-gray-950 flex justify-center items-center">
-                <button >CV Download</button>
-                </NavLink> */}
-                </div>
+  return (
+    <div className="navbar py-6 px-4 md:px-6 lg:px-8 max-w-screen-xl mx-auto text-gray-400">
+      {/* Navbar Start */}
+      <div className="navbar-start">
+        <div className="dropdown">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52">
+            {navItems}
+          </ul>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="avatar">
+            <div className="w-12 rounded-full border-2 border-gray-500">
+              <img src="https://i.ibb.co.com/N2Rqfg8b/Fronend-Developer1.jpg" alt="Profile" />
             </div>
+          </div>
+          <span className="text-xl font-bold text-gray-300 ">ROBIUL</span>
+        </div>
+      </div>
 
-        </>
-    )
-}
-{/* <button className="bg-primaryColor py-3 text-primaryRed rounded-lg shadow-xl shadow-gray-950 flex justify-center items-center">CV Download</button> */ }
-export default Navbar
+      {/* Navbar Center for large screen */}
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1 gap-6 uppercase font-normal text-sm">
+          {navItems}
+        </ul>
+      </div>
+
+      {/* Navbar End */}
+      <div className="navbar-end">
+        <a
+          href="/Robiul_Islam.pdf"
+          download
+          className="bg-primaryColor text-primaryRed md:px-5 px-3 py-3 rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.7)] hover:bg-gray-900 hover:translate-y-1 duration-300 uppercase text-sm font-semibold"
+        >
+          CV Download
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

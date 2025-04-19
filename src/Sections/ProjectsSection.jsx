@@ -43,7 +43,7 @@ const ProjectsSection = () => {
 
   return (
     <Element name="project">
-      <section className="mt-32" ref={projectSectionRef} id="projectSection">
+      <section className="mt-32 md:px-0 px-4" ref={projectSectionRef} id="projectSection">
       <Header
       title={'Projects'}
       subTitle={'My Recent Works'}
