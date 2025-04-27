@@ -33,7 +33,7 @@ const MainLayOut = () => {
         <Outlet/>
        </div>
        {/* Footer Section */}
-       <div className='mt-24'>
+       <div className='md:mt-24 mt-8'>
         <Footer/>
        </div>
     </>

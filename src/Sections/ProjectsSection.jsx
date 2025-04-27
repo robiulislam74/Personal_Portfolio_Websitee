@@ -43,12 +43,12 @@ const ProjectsSection = () => {
 
   return (
     <Element name="project">
-      <section className="mt-32 md:px-0 px-4" ref={projectSectionRef} id="projectSection">
+      <section className="mt-32 max-w-screen-xl px-4 md:px-8" ref={projectSectionRef} id="projectSection">
       <Header
       title={'Projects'}
       subTitle={'My Recent Works'}
       />
-      <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} openProjectDetail={openProjectDetails(1)} />
         ))}

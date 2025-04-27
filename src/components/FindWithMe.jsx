@@ -27,7 +27,7 @@ const FindWithMe = () => {
         //     </div>
         // </div>
         <div className="">
-            <h4 className="uppercase text-gray-300 text-center md:text-left mb-6 text-base sm:text-lg">
+            <h4 className="uppercase text-gray-300 text-center md:text-left mb-4 font-semibold md:text-base text-sm">
                 find with me
             </h4>
 

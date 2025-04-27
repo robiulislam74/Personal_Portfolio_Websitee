@@ -46,7 +46,7 @@ const Education = () => {
     //     ))}
     //   </div>
     // </section>
-    <section className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 ">
+    <section className="max-w-screen-xl mx-auto px-4 md:px-8 ">
       <Header title="2017 - 2025" subTitle="Education Quality" />
 
       <div className="relative border-l-2 border-gray-700 ml-4 space-y-10">

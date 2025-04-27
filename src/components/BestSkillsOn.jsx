@@ -21,7 +21,7 @@ const BestSkillsOn = () => {
         //     </div>
         // </div>
         <div className="">
-            <h4 className="uppercase text-gray-300 text-center md:text-left mb-6 text-base sm:text-lg">
+            <h4 className="uppercase text-gray-300 text-center md:text-left mb-3 font-semibold md:text-base text-sm">
                 best skill on
             </h4>
 

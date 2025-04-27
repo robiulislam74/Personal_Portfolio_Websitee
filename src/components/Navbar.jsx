@@ -9,13 +9,13 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link to="features" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
-          Features
+        <Link to="about" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
+          About Me
         </Link>
       </li>
       <li>
-        <Link to="about" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
-          About Me
+        <Link to="skill" smooth={true} duration={500} className="hover:text-gray-200 hover:font-semibold duration-100 cursor-pointer">
+          Skills
         </Link>
       </li>
       <li>
@@ -37,7 +37,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar py-6 px-4 md:px-6 lg:px-8 max-w-screen-xl mx-auto text-gray-400">
+    <div className="navbar py-4 md:pb-6 md:pt-7 px-4 md:px-6 lg:px-8 max-w-screen-xl mx-auto text-gray-400">
       {/* Navbar Start */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -61,7 +61,7 @@ const Navbar = () => {
               <img src="https://i.ibb.co.com/N2Rqfg8b/Fronend-Developer1.jpg" alt="Profile" />
             </div>
           </div>
-          <span className="text-xl font-bold text-gray-300 ">ROBIUL</span>
+          <span className="text-xl font-bold text-gray-300 hidden md:flex">ROBIUL</span>
         </div>
       </div>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
         <a
           href="/Robiul_Islam.pdf"
           download
-          className="bg-primaryColor text-primaryRed md:px-5 px-3 py-3 rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.7)] hover:bg-gray-900 hover:translate-y-1 duration-300 uppercase text-sm font-semibold"
+          className="bg-primaryColor text-primaryRed md:px-5 px-3 py-3 rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.7)] hover:bg-gray-900 hover:translate-y-1 duration-300 uppercase md:text-sm text-xs font-semibold"
         >
           CV Download
         </a>
