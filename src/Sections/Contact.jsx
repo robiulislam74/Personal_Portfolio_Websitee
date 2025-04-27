@@ -18,7 +18,7 @@ const Contact = () => {
       message: data.message
     }
 
-    const res = await fetch('http://localhost:3000/contact', {
+    const res = await fetch('https://portfolio-server-sites.vercel.app/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(contactData)
@@ -51,7 +51,7 @@ const Contact = () => {
 
       <div className="w-full flex flex-col lg:flex-row gap-8">
         {/* Left Side: Info Card */}
-        <div className="w-full lg:w-5/12 p-6 rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
+        <div className="w-full lg:w-5/12 md:p-6 p-4 rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
           <img
             src="https://i.ibb.co.com/TM2bqH2G/contact1.png"
             alt="contact-Img"
