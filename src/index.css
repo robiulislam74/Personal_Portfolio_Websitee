@@ -15,5 +15,6 @@
 body{
   font-family: "Montserrat", serif;
   background-color: #212428;
+    overflow-x: hidden;
 }
 

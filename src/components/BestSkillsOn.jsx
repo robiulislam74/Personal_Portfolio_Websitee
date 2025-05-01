@@ -2,6 +2,7 @@ import React from 'react'
 import { FaNodeJs, FaReact } from 'react-icons/fa'
 import { RiTailwindCssFill } from 'react-icons/ri'
 import { SiMongodb } from 'react-icons/si'
+import { Link, NavLink } from 'react-router-dom'
 
 const BestSkillsOn = () => {
     return (
@@ -27,19 +28,19 @@ const BestSkillsOn = () => {
 
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 {/* React */}
-                <div className="p-4 hover:-mt-2 hover:bg-gray-900 hover:shadow-none duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.7)] inline-block rounded-lg">
+                <NavLink to={'https://react.dev/'} target='_blank' className="p-4 hover:-mt-2 hover:bg-gray-900 hover:shadow-none duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.7)] inline-block rounded-lg">
                     <FaReact className="text-[#087EA4] text-2xl sm:text-3xl" />
-                </div>
+                </NavLink>
 
                 {/* Node.js */}
-                <div className="p-4 hover:-mt-2 hover:bg-gray-900 hover:shadow-none duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.7)] inline-block rounded-lg">
+                <NavLink to={'https://nodejs.org/en'} target='_blank' className="p-4 hover:-mt-2 hover:bg-gray-900 hover:shadow-none duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.7)] inline-block rounded-lg">
                     <FaNodeJs className="text-[#4F9B43] text-2xl sm:text-3xl" />
-                </div>
+                </NavLink>
 
                 {/* Tailwind CSS */}
-                <div className="p-4 hover:-mt-2 hover:bg-gray-900 hover:shadow-none duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.7)] inline-block rounded-lg">
+                <NavLink to={'https://tailwindcss.com/'} target='_blank' className="p-4 hover:-mt-2 hover:bg-gray-900 hover:shadow-none duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.7)] inline-block rounded-lg">
                     <RiTailwindCssFill className="text-[#00BCFF] text-2xl sm:text-3xl" />
-                </div>
+                </NavLink>
             </div>
         </div>
 

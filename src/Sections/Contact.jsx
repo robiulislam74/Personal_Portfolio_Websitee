@@ -3,7 +3,9 @@ import Header from '../components/Header'
 import FindWithMe from '../components/FindWithMe'
 import Swal from 'sweetalert2'
 import { LuPhoneCall } from 'react-icons/lu'
-import { HiOutlineMail} from 'react-icons/hi'
+import { HiOutlineMail } from 'react-icons/hi'
+import { useInView } from 'react-intersection-observer'
+import 'animate.css'
 
 const Contact = () => {
   const handleSubmit = async (e) => {
@@ -22,9 +24,9 @@ const Contact = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(contactData)
-    });
+    })
 
-    const response = await res.json();
+    const response = await res.json()
     if (response.success) {
       Swal.fire({
         position: "center",
@@ -32,29 +34,36 @@ const Contact = () => {
         title: "Email sent successfully!",
         showConfirmButton: false,
         timer: 2000
-      });
+      })
     } else {
       Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "Something went wrong! Please try again later.",
-      });
+      })
     }
-    e.target.reset();
+    e.target.reset()
   }
+
+  const [leftRef, leftInView] = useInView({ threshold: 0.1, triggerOnce: true })
+const [rightRef, rightInView] = useInView({ threshold: 0.1, triggerOnce: true })
+
 
   return (
     <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-      <div>
-        <Header title="Contact" subTitle="Contact With Me" />
-      </div>
+      <Header title="Contact" subTitle="Contact With Me" />
 
       <div className="w-full flex flex-col lg:flex-row gap-8">
-        {/* Left Side: Info Card */}
-        <div className="w-full lg:w-5/12 md:p-6 p-4 rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.7)]">
+        {/* Left Side */}
+        <div
+          ref={leftRef}
+          className={`w-full lg:w-5/12 md:p-6 p-4 rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.7)]
+          ${leftInView ? 'animate__animated animate__slideInLeft' : 'opacity-0'}
+          transition-opacity duration-700 ease-in-out`}
+        >
           <img
             src="https://i.ibb.co.com/TM2bqH2G/contact1.png"
-            alt="contact-Img"
+            alt="contact"
             className="rounded-lg w-full md:h-60"
           />
           <div className="mt-8">
@@ -68,13 +77,13 @@ const Contact = () => {
               </p>
               <div className="space-y-2 my-3">
                 <p className='flex gap-x-2 items-center'>
-                <LuPhoneCall className='text-2xl'/>
+                  <LuPhoneCall className='text-2xl' />
                   <span className="text-gray-300 hover:text-pinkRed hover:font-medium transition duration-150">
                     +8801770070249
                   </span>
                 </p>
                 <p className='flex gap-x-2 items-center'>
-                <HiOutlineMail className='text-2xl'/>
+                  <HiOutlineMail className='text-2xl' />
                   <span className="text-gray-300 hover:text-pinkRed hover:font-medium transition duration-150">
                     codecraft.robiul@gmail.com
                   </span>
@@ -87,58 +96,43 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Right Side: Form */}
-        <div className="w-full lg:flex-1">
-          <form onSubmit={handleSubmit} className="text-white rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.7)] p-6 sm:p-8 w-full space-y-6 ">
+        {/* Right Side */}
+        <div
+          ref={rightRef}
+          className={`w-full lg:flex-1
+          ${rightInView ? 'animate__animated animate__slideInRight' : 'opacity-0'}
+          transition-opacity duration-700 ease-in-out`}
+        >
+          <form onSubmit={handleSubmit} className="text-white rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.7)] p-6 sm:p-8 w-full space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
               <div>
                 <label className="block text-sm mb-2 uppercase">Your Name</label>
-                <input
-                  name='name'
-                  type="text"
-                  placeholder="Enter your name"
-                  className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2"
-                />
+                <input name='name' type="text" placeholder="Enter your name"
+                  className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2" />
               </div>
               <div>
                 <label className="block text-sm mb-2 uppercase">Phone Number</label>
-                <input
-                  name='number'
-                  type="text"
-                  placeholder="Enter your number"
-                  className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2"
-                />
+                <input name='number' type="text" placeholder="Enter your number"
+                  className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2" />
               </div>
             </div>
 
             <div>
               <label className="block text-sm mb-2 uppercase">Email</label>
-              <input
-                name='email'
-                type="email"
-                placeholder="Enter your email"
-                className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2"
-              />
+              <input name='email' type="email" placeholder="Enter your email"
+                className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2" />
             </div>
 
             <div>
               <label className="block text-sm mb-2 uppercase">Subject</label>
-              <input
-                name='subject'
-                type="text"
-                placeholder="Enter subject"
-                className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2"
-              />
+              <input name='subject' type="text" placeholder="Enter subject"
+                className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2" />
             </div>
 
             <div>
               <label className="block text-sm mb-2 uppercase">Your Message</label>
-              <textarea
-                name='message'
-                rows="6"
-                placeholder="Type your message here..."
-                className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2"
-              ></textarea>
+              <textarea name='message' rows="6" placeholder="Type your message here..."
+                className="w-full bg-[#191B1E] rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-pink-600 shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)] border border-gray-900 border-b-[#323437] border-b-2"></textarea>
             </div>
 
             <div>
@@ -150,7 +144,6 @@ const Contact = () => {
         </div>
       </div>
     </div>
-
   )
 }
 
